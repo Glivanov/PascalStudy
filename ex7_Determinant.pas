@@ -66,12 +66,15 @@ i,j: integer;
     else
       for j:= 1 to N do
       begin
-        if Odd(1+j) then
-          p := -1
-        else 
-          p := 1;
-        subMatrix := getSubMatrix(matrix,N,1,j);
-        res := res + p * matrix[1][j] * det(subMatrix,N-1);
+        if matrix[1][j] <> 0 then
+        begin
+          if Odd(1+j) then
+            p := -1
+          else 
+            p := 1;
+          subMatrix := getSubMatrix(matrix,N,1,j);
+          res := res + p * matrix[1][j] * det(subMatrix,N-1);
+        end;
       end;
     result := res;
   end;
