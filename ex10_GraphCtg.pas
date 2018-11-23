@@ -1,4 +1,8 @@
 ﻿program GraphCtg;
+(*
+График функции, заданной в function F
+в данном примере рисуем y = ctg(x)
+*)
 uses 
 GraphABC;
 const
